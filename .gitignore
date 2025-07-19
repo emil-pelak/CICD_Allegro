@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+
+# Robot logs
+robot_reports/
+output.xml
+log.html
+report.html
+
+# VS Code
+.vscode/
