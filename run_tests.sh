@@ -1,7 +1,10 @@
 #!/bin/bash
 set -e
 
-# Utwórz virtualenv
+# Wyczyść poprzednie raporty
+rm -rf robot_reports/*
+
+# Utwórz virtualenv (jeśli nie istnieje)
 python3 -m venv venv
 source venv/bin/activate
 
@@ -9,10 +12,8 @@ source venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 
-# Uruchom testy
+# Uruchom testy i zapisz raporty do robot_reports
 robot -d robot_reports tests/
 
-# Otwórz raport (np. log.html)
-xdg-open tests/log.html
-xdg-open tests/report.html
-xdg-open tests/output.xml
+# Otwórz raport w pełnym ekranie w Firefox
+google-chrome --start-fullscreen "file://$(pwd)/robot_reports/report.html" &

@@ -10,4 +10,4 @@ log.html
 report.html
 
 # VS Code
-.vscode/
+.vscode/venv/

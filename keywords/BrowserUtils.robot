@@ -2,5 +2,10 @@
 Library    SeleniumLibrary
 
 *** Keywords ***
-Take Screenshot If Test Fails
-    Run Keyword If Test Failed    Capture Page Screenshot
+Scroll To Bottom
+    Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
+    Sleep    1s
+
+Scroll To Top
+    Execute JavaScript    window.scrollTo(0, 0)
+    Sleep    1s

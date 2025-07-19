@@ -1,0 +1,6 @@
+{
+  "robot.python.executable": "${workspaceFolder}/venv/bin/python",
+  "robot.libraries.libdocMode": "OFFLINE",
+  "robot.language-server.logLevel": "INFO",
+  "robot.language-server.python": "${workspaceFolder}/venv/bin/python"
+}
